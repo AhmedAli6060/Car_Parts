@@ -1,0 +1,289 @@
+USE [Auto Parts]
+GO
+/****** Object:  Table [dbo].[Services]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Services](
+	[Services_ID] [int] IDENTITY(1,1) NOT NULL,
+	[ServName] [nvarchar](max) NOT NULL,
+	[Service] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Services] PRIMARY KEY CLUSTERED 
+(
+	[Services_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Parts]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Parts](
+	[PartsID] [int] IDENTITY(1,1) NOT NULL,
+	[NameOFPart] [nvarchar](max) NOT NULL,
+	[Image] [nvarchar](max) NOT NULL,
+	[Price] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](max) NOT NULL,
+	[Status] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_OrderPart] PRIMARY KEY CLUSTERED 
+(
+	[PartsID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Orders]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Orders](
+	[Order_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Mobile] [nvarchar](50) NOT NULL,
+	[Area] [nvarchar](50) NOT NULL,
+	[City] [nvarchar](50) NOT NULL,
+	[VinNO] [nvarchar](max) NOT NULL,
+	[CarBrand] [nvarchar](max) NOT NULL,
+	[TypeOfCar] [nvarchar](max) NOT NULL,
+	[CarModel] [nvarchar](max) NOT NULL,
+	[CarStyle] [nvarchar](max) NULL,
+	[NameOfPart] [nvarchar](max) NOT NULL,
+	[DescriptionOfPart] [nvarchar](max) NOT NULL,
+	[Delivery] [nvarchar](50) NOT NULL,
+	[Seen] [nvarchar](50) NOT NULL,
+	[Status] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
+(
+	[Order_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Information]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Information](
+	[info_ID] [int] IDENTITY(1,1) NOT NULL,
+	[AboutUS] [nvarchar](max) NOT NULL,
+	[Mobile] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+	[Address] [nvarchar](max) NOT NULL,
+	[Facebook] [nvarchar](max) NOT NULL,
+	[twitter] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Information] PRIMARY KEY CLUSTERED 
+(
+	[info_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Helping]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Helping](
+	[help_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[City] [nvarchar](max) NOT NULL,
+	[Mobile] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Helping] PRIMARY KEY CLUSTERED 
+(
+	[help_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Department]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Department](
+	[Department_ID] [int] IDENTITY(1,1) NOT NULL,
+	[CarBrand] [nvarchar](max) NOT NULL,
+	[TypeOfCar] [nvarchar](max) NOT NULL,
+	[CarModel] [nvarchar](max) NOT NULL,
+	[CarStyle] [nvarchar](max) NOT NULL,
+	[AssetType] [nvarchar](max) NOT NULL,
+	[DescriptionPart] [nvarchar](max) NOT NULL,
+	[Status] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Department] PRIMARY KEY CLUSTERED 
+(
+	[Department_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Customers]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customers](
+	[Customer_ID] [int] IDENTITY(1,1) NOT NULL,
+	[MemberShip] [nvarchar](50) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Mobile] [nvarchar](50) NOT NULL,
+	[Area] [nvarchar](50) NOT NULL,
+	[City] [nvarchar](50) NOT NULL,
+	[NameOfPart] [nvarchar](50) NULL,
+	[Image] [nvarchar](max) NULL,
+ CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED 
+(
+	[Customer_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Contents]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Contents](
+	[Content_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Carbrand] [nvarchar](max) NOT NULL,
+	[TypeOfCar] [nvarchar](max) NOT NULL,
+	[CarStyle] [nvarchar](max) NOT NULL,
+	[CarModel] [nvarchar](max) NOT NULL,
+	[TypeOfPart] [nvarchar](max) NOT NULL,
+	[Status] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Contents] PRIMARY KEY CLUSTERED 
+(
+	[Content_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ContactUs]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ContactUs](
+	[Cotact_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Subject] [nvarchar](max) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+	[Message] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_ContactUs] PRIMARY KEY CLUSTERED 
+(
+	[Cotact_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[WorkShops]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[WorkShops](
+	[WorkShop_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Phone] [nvarchar](max) NOT NULL,
+	[Mobile] [nvarchar](max) NOT NULL,
+	[Location] [nvarchar](max) NOT NULL,
+	[Photo] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_WorkShops] PRIMARY KEY CLUSTERED 
+(
+	[WorkShop_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Vision&Message]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Vision&Message](
+	[V_M_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Vision] [nvarchar](max) NOT NULL,
+	[Message] [nvarchar](max) NOT NULL,
+	[Stragety] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Vision&Message] PRIMARY KEY CLUSTERED 
+(
+	[V_M_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Users]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Users](
+	[User_ID] [int] IDENTITY(1,1) NOT NULL,
+	[UserName] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[Role] [nvarchar](50) NOT NULL,
+	[resetPass] [int] NOT NULL,
+ CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+	[User_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Subjects]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Subjects](
+	[Subject_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Nameofcar] [nvarchar](50) NULL,
+	[Sub] [nvarchar](max) NOT NULL,
+	[Image] [nvarchar](max) NULL,
+	[Createdate] [nvarchar](50) NOT NULL,
+	[User_ID] [int] NOT NULL,
+ CONSTRAINT [PK_Subjects] PRIMARY KEY CLUSTERED 
+(
+	[Subject_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Comments]    Script Date: 01/23/2017 19:55:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Comments](
+	[Comment_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Comment] [nvarchar](max) NOT NULL,
+	[CreateDate] [nvarchar](max) NOT NULL,
+	[user_ID] [int] NOT NULL,
+	[subject_ID] [int] NOT NULL,
+ CONSTRAINT [PK_UserParts] PRIMARY KEY CLUSTERED 
+(
+	[Comment_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  StoredProcedure [dbo].[delsubject]    Script Date: 01/23/2017 19:56:10 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE proc [dbo].[delsubject]
+@id int
+as
+begin
+delete from dbo.Comments where subject_ID=@id
+end
+GO
+/****** Object:  ForeignKey [FK_Comments_Subjects]    Script Date: 01/23/2017 19:55:59 ******/
+ALTER TABLE [dbo].[Comments]  WITH CHECK ADD  CONSTRAINT [FK_Comments_Subjects] FOREIGN KEY([subject_ID])
+REFERENCES [dbo].[Subjects] ([Subject_ID])
+GO
+ALTER TABLE [dbo].[Comments] CHECK CONSTRAINT [FK_Comments_Subjects]
+GO
+/****** Object:  ForeignKey [FK_Comments_Users]    Script Date: 01/23/2017 19:55:59 ******/
+ALTER TABLE [dbo].[Comments]  WITH CHECK ADD  CONSTRAINT [FK_Comments_Users] FOREIGN KEY([user_ID])
+REFERENCES [dbo].[Users] ([User_ID])
+GO
+ALTER TABLE [dbo].[Comments] CHECK CONSTRAINT [FK_Comments_Users]
+GO
+/****** Object:  ForeignKey [FK_Subjects_Comments]    Script Date: 01/23/2017 19:55:59 ******/
+ALTER TABLE [dbo].[Subjects]  WITH CHECK ADD  CONSTRAINT [FK_Subjects_Comments] FOREIGN KEY([User_ID])
+REFERENCES [dbo].[Users] ([User_ID])
+GO
+ALTER TABLE [dbo].[Subjects] CHECK CONSTRAINT [FK_Subjects_Comments]
+GO

@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Car_Parts.Site12" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Car Services</title>
+    <link rel="icon" href="images/Componants/1.png" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet'
+        type='text/css' />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/autocar.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript">
+        (function () {
+            var a = document.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = "http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.486#p=wdcxwd5000aads-00m2b0_wd-wcav5m34806948068";
+            var b = document.getElementsByTagName("script")[0];
+            b.parentNode.insertBefore(a, b);
+        })();
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="sidebar-menu-container" id="sidebar-menu-container">
+        <div class="sidebar-menu-push">
+            <div class="sidebar-menu-overlay">
+            </div>
+            <div class="sidebar-menu-inner">
+                <header class="site-header">
+                <div id="main-header" class="main-header header-sticky navbar">
+                    <div class="container-fluid clearfix">
+                        <div class="logo">
+                            <a href="Home.aspx"><img src="images/1By0Ocp.png" title="logo" alt="logo" /></a>
+                        </div>
+                        
+                        <div class="header-right-toggle pull-left hidden-md hidden-lg">
+                            <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-bars"></i></button>
+                        </div>
+                        <nav class="main-navigation collapse navbar-collapse" id="myNavbar">
+                            <ul>
+                                <li><a href="Home.aspx">الرئيسية</a></li>
+                                <li><a href="Services.aspx">خدماتنا</a>
+                                </li>
+                                <li class="dropdown"> <a href="#" class="dropdown-toggle has-submenu" data-toggle="dropdown">أقسام الموقع</a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li><a href="Lists(USA).aspx">قسم قطع تشليح السيارات الامريكية</a></li>
+                                        <li><a href="Lists(JAP).aspx">قسم قطع تشليح السيارات اليابانية</a></li>
+                                        <li><a href="Lists(GER).aspx">قسم قطع تشليح السيارات الالمانية</a></li>
+                                        <li><a href="Lists(KOR).aspx">قسم قطع تشليح السيارات الكورية</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="Rrequests(New).aspx">طلب قطعة غيار جديد</a></li>
+                                <li><a href="Requstes(Used).aspx">طلب قطعة غيار تشليح</a></li>
+                                <li><a href="WorkShops(User).aspx">مراكز ورش الصيانة</a></li>
+                                <li><a href="Help.aspx">طلب مساعدة على الطريق</a></li>
+                                <li><a href="UserParts.aspx">حراج سيارات التشليح</a></li>
+                                <li><a href="Contact US.aspx">اتصل بنا</a></li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <a href="LogIn.aspx">
+        <div id="plus" class="plus" style="font-weight: bold" runat="server">
+            <span style="color: White">تسجيل الدخول</span></div>
+    </a>
+    <div id="Div1" class="plus" style="font-weight: bold" runat="server">
+        <asp:LinkButton ID="LinkButton2" CausesValidation="false" runat="server" OnClick="LinkButton2_Click"><span style="color:White">تسجيل الخروج</span></asp:LinkButton></div>
+    <footer>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="footer-item">
+                                <div class="about-autocar">
+                                    <h2>من نحن ؟</h2>
+                                    <div class="line-dec"></div>
+                                    <p><asp:Label ID="lblAbout" runat="server" Text=""></asp:Label></p>
+
+                                    
+                                    <div class="row">
+                                        <div class="submit-coment col-md-12">
+                                            <div class="primary-button">
+                                        <asp:LinkButton ID="LinkButton1" Visible="false" CausesValidation="false" PostBackUrl="~/Home(Admin).aspx" runat="server">صفحات الأدمن</asp:LinkButton>
+                                        </div>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="margin-right:100px">
+                            <div class="footer-item">
+                                <div class="what-offer">
+                                    <h2>خدماتنا</h2>
+                                    <div class="line-dec"></div>
+                                    <ul style="color:White" >
+                                    <asp:Repeater ID="Repeater1" runat="server">
+                                    <ItemTemplate>
+                                    <li><%# Eval("Service")%></li>
+                                    </ItemTemplate>
+                                    </asp:Repeater>
+                                    </ul>
+                                         
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <div class="col-md-2" style="margin-right:200px">
+                            <div class="footer-item">
+                                <div class="connect-us">
+                                    <h2> تواصل معنا من خلال</h2>
+                                    <div class="line-dec"></div>
+                                    <ul class="list-unstyled social-list" >
+
+                                       
+                            <li><a id="facebook" runat="server" target="_blank" ><img src="images/Footer/facebook.png" alt="FaceBook" /></a></li>
+                            <li><img src="images/Footer/google-plus.png" alt="google-plus" /></li>
+                            <li><img src="images/Footer/instagram.png" alt="instagram" /></li>
+                            <li><img src="images/Footer/pinterest.png" alt="pinterest" /></li>
+                            <li><a id="twitter" runat="server" target="_blank"><img src="images/Footer/twitter.png" alt="twitter" /></a></li>
+                            <li><img src="images/Footer/youtube.png" alt="youtube" /></li>
+                             </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <p>
+                    جميع الحقوق محفوظة 2016 <a href="https://www.facebook.com/elmagic.ahmed.1690" target="_blank">
+                        <em>CreaDev</em></a></p>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+    </form>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Comments" EntityType="Model.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactUs" EntityType="Model.Store.ContactUs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contents" EntityType="Model.Store.Contents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customers" EntityType="Model.Store.Customers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Department" EntityType="Model.Store.Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Helping" EntityType="Model.Store.Helping" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Information" EntityType="Model.Store.Information" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orders" EntityType="Model.Store.Orders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Parts" EntityType="Model.Store.Parts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Services" EntityType="Model.Store.Services" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subjects" EntityType="Model.Store.Subjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="Model.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vision&amp;Message" EntityType="Model.Store.Vision&amp;Message" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WorkShops" EntityType="Model.Store.WorkShops" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Comments_Subjects" Association="Model.Store.FK_Comments_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Users" Association="Model.Store.FK_Comments_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subjects_Comments" Association="Model.Store.FK_Subjects_Comments">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Subjects" EntitySet="Subjects" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="Comment_ID" />
+    </Key>
+    <Property Name="Comment_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="user_ID" Type="int" Nullable="false" />
+    <Property Name="subject_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactUs">
+    <Key>
+      <PropertyRef Name="Cotact_ID" />
+    </Key>
+    <Property Name="Cotact_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="Content_ID" />
+    </Key>
+    <Property Name="Content_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Carbrand" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TypeOfCar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarStyle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarModel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TypeOfPart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MemberShip" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Area" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="NameOfPart" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Department_ID" />
+    </Key>
+    <Property Name="Department_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CarBrand" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TypeOfCar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarModel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarStyle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AssetType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DescriptionPart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Helping">
+    <Key>
+      <PropertyRef Name="help_ID" />
+    </Key>
+    <Property Name="help_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Information">
+    <Key>
+      <PropertyRef Name="info_ID" />
+    </Key>
+    <Property Name="info_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AboutUS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Facebook" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="twitter" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Area" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="VinNO" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarBrand" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TypeOfCar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarModel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarStyle" Type="nvarchar(max)" />
+    <Property Name="NameOfPart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DescriptionOfPart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Delivery" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Seen" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Parts">
+    <Key>
+      <PropertyRef Name="PartsID" />
+    </Key>
+    <Property Name="PartsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NameOFPart" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Price" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Services_ID" />
+    </Key>
+    <Property Name="Services_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ServName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Service" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nameofcar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sub" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Createdate" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Role" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="resetPass" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vision&amp;Message">
+    <Key>
+      <PropertyRef Name="V_M_ID" />
+    </Key>
+    <Property Name="V_M_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Vision" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Stragety" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkShops">
+    <Key>
+      <PropertyRef Name="WorkShop_ID" />
+    </Key>
+    <Property Name="WorkShop_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Comments_Subjects">
+    <End Role="Subjects" Type="Model.Store.Subjects" Multiplicity="1" />
+    <End Role="Comments" Type="Model.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Users">
+    <End Role="Users" Type="Model.Store.Users" Multiplicity="1" />
+    <End Role="Comments" Type="Model.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="user_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subjects_Comments">
+    <End Role="Users" Type="Model.Store.Users" Multiplicity="1" />
+    <End Role="Subjects" Type="Model.Store.Subjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="Subjects">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="delsubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+</Schema>

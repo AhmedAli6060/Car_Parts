@@ -1,0 +1,98 @@
+.plus {
+  position: fixed;
+  color: #fff;
+  bottom: 16%;
+  font-size: 15px;
+   left: 0;
+  -webkit-transition: all 1.25s ease;
+  -moz-transition: all 1.25s ease;
+  -o-transition: all 1.25s ease;
+  transition: all 1.25s ease;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.plus span {
+  position: absolute;
+  margin-top: 38px;
+  right: 0px;
+}
+
+.plus::after {
+  content: '';
+  display: block;
+  display: relative;
+  border-top: 55px solid transparent;
+  border-bottom: 88px solid transparent;
+  border-left:80px solid rgba(255, 186, 0, 0.9) !important;
+}
+
+
+
+   /*Start section Our Team*/
+      
+.our_team
+{
+    background: url("../images/contact.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 400px;
+    color: #FFF;
+}
+      
+      
+.our_team .team
+{
+}
+
+.our_team h4
+{
+    margin-bottom: 60px;
+    color:rgba(255, 186, 0, 0.9) !important;
+}
+
+.our_team p
+{
+    font-weight:bold;
+    color:White;
+}
+.our_team .person
+{
+    margin-bottom: 40px;
+}
+
+.our_team .team .person i
+{
+        -webkit-transition-duration: 0.7s;
+    -moz-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+}
+.our_team .team .person:hover i
+{
+        -webkit-transform: scale(1.1,1.1) rotate(360deg);
+    -moz-transform: scale(1.1,1.1) rotate(360deg);
+    -o-transform: scale(1.1,1.1) rotate(360deg);
+    transform: scale(1.1,1.1) rotate(360deg);
+    color: #E41B17;
+}
+
+.our_team .team .person:hover .fa-facebook
+{
+    color: #3b5998;
+}
+
+.our_team .team .person:hover .fa-twitter
+{
+    color: #1da1f2;
+}
+
+.our_team .team .person:hover .fa-google-plus
+{
+    color: #db4437;
+}
+
+      /*End section Our Team*/

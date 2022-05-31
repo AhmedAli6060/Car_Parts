@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Comments" EntityType="Model.Store.Comments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactUs" EntityType="Model.Store.ContactUs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contents" EntityType="Model.Store.Contents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Customers" EntityType="Model.Store.Customers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Department" EntityType="Model.Store.Department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Helping" EntityType="Model.Store.Helping" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Information" EntityType="Model.Store.Information" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Orders" EntityType="Model.Store.Orders" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Parts" EntityType="Model.Store.Parts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Services" EntityType="Model.Store.Services" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subjects" EntityType="Model.Store.Subjects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="Model.Store.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Vision&amp;Message" EntityType="Model.Store.Vision&amp;Message" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorkShops" EntityType="Model.Store.WorkShops" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Comments_Subjects" Association="Model.Store.FK_Comments_Subjects">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Users" Association="Model.Store.FK_Comments_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Subjects_Comments" Association="Model.Store.FK_Subjects_Comments">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Subjects" EntitySet="Subjects" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="Comment_ID" />
+          </Key>
+          <Property Name="Comment_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="user_ID" Type="int" Nullable="false" />
+          <Property Name="subject_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactUs">
+          <Key>
+            <PropertyRef Name="Cotact_ID" />
+          </Key>
+          <Property Name="Cotact_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contents">
+          <Key>
+            <PropertyRef Name="Content_ID" />
+          </Key>
+          <Property Name="Content_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Carbrand" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TypeOfCar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarStyle" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarModel" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TypeOfPart" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MemberShip" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Area" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NameOfPart" Type="nvarchar" MaxLength="50" />
+          <Property Name="Image" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Department_ID" />
+          </Key>
+          <Property Name="Department_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CarBrand" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TypeOfCar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarModel" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarStyle" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AssetType" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DescriptionPart" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Helping">
+          <Key>
+            <PropertyRef Name="help_ID" />
+          </Key>
+          <Property Name="help_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="City" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Information">
+          <Key>
+            <PropertyRef Name="info_ID" />
+          </Key>
+          <Property Name="info_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AboutUS" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Facebook" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="twitter" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Area" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="VinNO" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarBrand" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TypeOfCar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarModel" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CarStyle" Type="nvarchar(max)" />
+          <Property Name="NameOfPart" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DescriptionOfPart" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Delivery" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Seen" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Parts">
+          <Key>
+            <PropertyRef Name="PartsID" />
+          </Key>
+          <Property Name="PartsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NameOFPart" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="Services_ID" />
+          </Key>
+          <Property Name="Services_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ServName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Service" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="Subject_ID" />
+          </Key>
+          <Property Name="Subject_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nameofcar" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sub" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="Createdate" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Role" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="resetPass" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vision&amp;Message">
+          <Key>
+            <PropertyRef Name="V_M_ID" />
+          </Key>
+          <Property Name="V_M_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vision" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Stragety" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorkShops">
+          <Key>
+            <PropertyRef Name="WorkShop_ID" />
+          </Key>
+          <Property Name="WorkShop_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Comments_Subjects">
+          <End Role="Subjects" Type="Model.Store.Subjects" Multiplicity="1" />
+          <End Role="Comments" Type="Model.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="Subject_ID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="subject_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Users">
+          <End Role="Users" Type="Model.Store.Users" Multiplicity="1" />
+          <End Role="Comments" Type="Model.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="user_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subjects_Comments">
+          <End Role="Users" Type="Model.Store.Users" Multiplicity="1" />
+          <End Role="Subjects" Type="Model.Store.Subjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Subjects">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="delsubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Auto_PartsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Comments" EntityType="Model.Comment" />
+          <EntitySet Name="ContactUs" EntityType="Model.ContactU" />
+          <EntitySet Name="Contents" EntityType="Model.Content" />
+          <EntitySet Name="Departments" EntityType="Model.Department" />
+          <EntitySet Name="Helpings" EntityType="Model.Helping" />
+          <EntitySet Name="Information" EntityType="Model.Information" />
+          <EntitySet Name="Orders" EntityType="Model.Order" />
+          <EntitySet Name="Services" EntityType="Model.Service" />
+          <EntitySet Name="Users" EntityType="Model.User" />
+          <EntitySet Name="Vision_Message" EntityType="Model.Vision_Message" />
+          <AssociationSet Name="FK_Comments_Users" Association="Model.FK_Comments_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <FunctionImport Name="delsubject">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="WorkShops" EntityType="Model.WorkShop" />
+          <FunctionImport Name="slcHelp" >
+          <Parameter Name="city" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Customers" EntityType="Model.Customer" />
+          <EntitySet Name="Parts" EntityType="Model.Part" />
+          <EntitySet Name="Subjects" EntityType="Model.Subject" />
+          <AssociationSet Name="FK_Comments_Subjects" Association="Model.FK_Comments_Subjects">
+            <End Role="Subject" EntitySet="Subjects" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Subjects_Comments" Association="Model.FK_Subjects_Comments">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Subject" EntitySet="Subjects" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Comment_ID" />
+          </Key>
+          <Property Name="Comment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Comment1" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="user_ID" Type="Int32" Nullable="false" />
+          <Property Name="subject_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Model.FK_Comments_Users" FromRole="Comments" ToRole="Users" />
+          <NavigationProperty Name="Subject" Relationship="Model.FK_Comments_Subjects" FromRole="Comment" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="ContactU">
+          <Key>
+            <PropertyRef Name="Cotact_ID" />
+          </Key>
+          <Property Name="Cotact_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Content">
+          <Key>
+            <PropertyRef Name="Content_ID" />
+          </Key>
+          <Property Name="Content_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Carbrand" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TypeOfCar" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarStyle" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarModel" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TypeOfPart" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Department_ID" />
+          </Key>
+          <Property Name="Department_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarBrand" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TypeOfCar" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarModel" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarStyle" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="AssetType" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DescriptionPart" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Helping">
+          <Key>
+            <PropertyRef Name="help_ID" />
+          </Key>
+          <Property Name="help_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Information">
+          <Key>
+            <PropertyRef Name="info_ID" />
+          </Key>
+          <Property Name="info_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboutUS" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Facebook" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="twitter" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Area" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="VinNO" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarBrand" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TypeOfCar" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarModel" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CarStyle" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NameOfPart" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DescriptionOfPart" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Delivery" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Seen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Services_ID" />
+          </Key>
+          <Property Name="Services_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Service1" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Role" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Comments" Relationship="Model.FK_Comments_Users" FromRole="Users" ToRole="Comments" />
+          <NavigationProperty Name="Subjects" Relationship="Model.FK_Subjects_Comments" FromRole="User" ToRole="Subject" />
+          <Property Type="Int32" Name="resetPass" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Vision_Message">
+          <Key>
+            <PropertyRef Name="V_M_ID" />
+          </Key>
+          <Property Name="V_M_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Vision" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Stragety" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Comments_Users">
+          <End Role="Users" Type="Model.User" Multiplicity="1" />
+          <End Role="Comments" Type="Model.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="user_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="WorkShop">
+          <Key>
+            <PropertyRef Name="WorkShop_ID" />
+          </Key>
+          <Property Type="Int32" Name="WorkShop_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Photo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Type="Int32" Name="Customer_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MemberShip" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Area" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NameOfPart" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Image" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Part">
+          <Key>
+            <PropertyRef Name="PartsID" />
+          </Key>
+          <Property Type="Int32" Name="PartsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="NameOFPart" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Price" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Image" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="Subject_ID" />
+          </Key>
+          <Property Type="Int32" Name="Subject_ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nameofcar" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sub" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Image" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Createdate" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="User_ID" Nullable="false" />
+          <NavigationProperty Name="Comments" Relationship="Model.FK_Comments_Subjects" FromRole="Subject" ToRole="Comment" />
+          <NavigationProperty Name="User" Relationship="Model.FK_Subjects_Comments" FromRole="Subject" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Comments_Subjects">
+          <End Type="Model.Subject" Role="Subject" Multiplicity="1" />
+          <End Type="Model.Comment" Role="Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Subject_ID" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="subject_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subjects_Comments">
+          <End Type="Model.User" Role="User" Multiplicity="1" />
+          <End Type="Model.Subject" Role="Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Subject">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Auto_PartsEntities">
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="Model.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="Comment_ID" ColumnName="Comment_ID" />
+                <ScalarProperty Name="Comment1" ColumnName="Comment" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="user_ID" ColumnName="user_ID" />
+                <ScalarProperty Name="subject_ID" ColumnName="subject_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactUs">
+            <EntityTypeMapping TypeName="Model.ContactU">
+              <MappingFragment StoreEntitySet="ContactUs">
+                <ScalarProperty Name="Cotact_ID" ColumnName="Cotact_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contents">
+            <EntityTypeMapping TypeName="Model.Content">
+              <MappingFragment StoreEntitySet="Contents">
+                <ScalarProperty Name="Content_ID" ColumnName="Content_ID" />
+                <ScalarProperty Name="Carbrand" ColumnName="Carbrand" />
+                <ScalarProperty Name="TypeOfCar" ColumnName="TypeOfCar" />
+                <ScalarProperty Name="CarStyle" ColumnName="CarStyle" />
+                <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+                <ScalarProperty Name="TypeOfPart" ColumnName="TypeOfPart" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="Model.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+                <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+                <ScalarProperty Name="TypeOfCar" ColumnName="TypeOfCar" />
+                <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+                <ScalarProperty Name="CarStyle" ColumnName="CarStyle" />
+                <ScalarProperty Name="AssetType" ColumnName="AssetType" />
+                <ScalarProperty Name="DescriptionPart" ColumnName="DescriptionPart" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Helpings">
+            <EntityTypeMapping TypeName="Model.Helping">
+              <MappingFragment StoreEntitySet="Helping">
+                <ScalarProperty Name="help_ID" ColumnName="help_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Information">
+            <EntityTypeMapping TypeName="Model.Information">
+              <MappingFragment StoreEntitySet="Information">
+                <ScalarProperty Name="info_ID" ColumnName="info_ID" />
+                <ScalarProperty Name="AboutUS" ColumnName="AboutUS" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Facebook" ColumnName="Facebook" />
+                <ScalarProperty Name="twitter" ColumnName="twitter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="Model.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="VinNO" ColumnName="VinNO" />
+                <ScalarProperty Name="CarBrand" ColumnName="CarBrand" />
+                <ScalarProperty Name="TypeOfCar" ColumnName="TypeOfCar" />
+                <ScalarProperty Name="CarModel" ColumnName="CarModel" />
+                <ScalarProperty Name="CarStyle" ColumnName="CarStyle" />
+                <ScalarProperty Name="NameOfPart" ColumnName="NameOfPart" />
+                <ScalarProperty Name="DescriptionOfPart" ColumnName="DescriptionOfPart" />
+                <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+                <ScalarProperty Name="Seen" ColumnName="Seen" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="Model.Service">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="Services_ID" ColumnName="Services_ID" />
+                <ScalarProperty Name="ServName" ColumnName="ServName" />
+                <ScalarProperty Name="Service1" ColumnName="Service" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Model.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="resetPass" ColumnName="resetPass" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vision_Message">
+            <EntityTypeMapping TypeName="Model.Vision_Message">
+              <MappingFragment StoreEntitySet="Vision&amp;Message">
+                <ScalarProperty Name="V_M_ID" ColumnName="V_M_ID" />
+                <ScalarProperty Name="Vision" ColumnName="Vision" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Stragety" ColumnName="Stragety" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="delsubject" FunctionName="Model.Store.delsubject" />
+          <EntitySetMapping Name="WorkShops">
+            <EntityTypeMapping TypeName="Model.WorkShop">
+              <MappingFragment StoreEntitySet="WorkShops">
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="WorkShop_ID" ColumnName="WorkShop_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="Model.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="NameOfPart" ColumnName="NameOfPart" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MemberShip" ColumnName="MemberShip" />
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parts">
+            <EntityTypeMapping TypeName="Model.Part">
+              <MappingFragment StoreEntitySet="Parts">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="NameOFPart" ColumnName="NameOFPart" />
+                <ScalarProperty Name="PartsID" ColumnName="PartsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="Model.Subject">
+              <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Sub" ColumnName="Sub" />
+                <ScalarProperty Name="Nameofcar" ColumnName="Nameofcar" />
+                <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="Model.Comment" Width="1.5" PointX="5.25" PointY="4.125" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ContactU" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Content" Width="1.5" PointX="4.75" PointY="0.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Department" Width="1.5" PointX="7.5" PointY="4" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Helping" Width="1.5" PointX="0.75" PointY="8.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Information" Width="1.5" PointX="2.75" PointY="8.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="6.75" PointY="8.75" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="8.75" PointY="8.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="0.75" PointY="2.625" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Vision_Message" Width="1.5" PointX="6.625" PointY="1" Height="1.7879850260416674" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Comments_Users" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.4612939453125" />
+          <ConnectorPoint PointX="5.25" PointY="4.4612939453125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.WorkShop" Width="1.5" PointX="8.625" PointY="1.5" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="9.5" PointY="4.875" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="Model.Part" Width="1.5" PointX="4.875" PointY="9" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="Model.Subject" Width="1.5" PointX="2.5" PointY="5.625" Height="2.5571907552083388" />
+        <AssociationConnector Association="Model.FK_Comments_Subjects" >
+          <ConnectorPoint PointX="4" PointY="6.0574446614583328" />
+          <ConnectorPoint PointX="5.25" PointY="6.0574446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.FK_Subjects_Comments" >
+          <ConnectorPoint PointX="1.5" PointY="4.797587890625" />
+          <ConnectorPoint PointX="1.5" PointY="6.9035953776041694" />
+          <ConnectorPoint PointX="2.5" PointY="6.9035953776041694" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

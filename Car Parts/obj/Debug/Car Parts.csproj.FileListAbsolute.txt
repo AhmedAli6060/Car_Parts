@@ -1,0 +1,10 @@
+D:\Ahmed\Work\Project\Car Parts\Car Parts\bin\Car Parts.dll
+D:\Ahmed\Work\Project\Car Parts\Car Parts\bin\Car Parts.pdb
+D:\Ahmed\Work\Project\Car Parts\Car Parts\obj\Debug\Car Parts.dll
+D:\Ahmed\Work\Project\Car Parts\Car Parts\obj\Debug\Car Parts.pdb
+D:\Ahmed\Work\Project\Car Parts\Car Parts\obj\Debug\Car Parts.csprojResolveAssemblyReference.cache
+D:\Ahmed\Work\Car Services\Project\Car Parts\Car Parts\bin\Car Parts.dll
+D:\Ahmed\Work\Car Services\Project\Car Parts\Car Parts\bin\Car Parts.pdb
+D:\Ahmed\Work\Car Services\Project\Car Parts\Car Parts\obj\Debug\Car Parts.csprojResolveAssemblyReference.cache
+D:\Ahmed\Work\Car Services\Project\Car Parts\Car Parts\obj\Debug\Car Parts.dll
+D:\Ahmed\Work\Car Services\Project\Car Parts\Car Parts\obj\Debug\Car Parts.pdb

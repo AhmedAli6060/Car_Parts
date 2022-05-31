@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{886D9B49-3F92-49BC-95AD-FF78B70640F0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Car_Parts</RootNamespace>
+    <AssemblyName>Car Parts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="14527496_1705802253079179_265918241_n.jpg" />
+    <Content Include="AddServices.aspx" />
+    <Content Include="Comments%28Admin%29.aspx" />
+    <Content Include="Contact US.aspx" />
+    <Content Include="Contactus%28Admin%29.aspx" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\autocar.css" />
+    <Content Include="css\bootstrap-rtl.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\settings.css" />
+    <Content Include="css\simple-line-icons.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Customer%28Admin%29.aspx" />
+    <Content Include="Help%28Admin%29.aspx" />
+    <Content Include="Help.aspx" />
+    <Content Include="Home%28Admin%29.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\01-car-listing.jpg" />
+    <Content Include="images\01-recent-thumb.jpg" />
+    <Content Include="images\01-service-image.jpg" />
+    <Content Include="images\01-slide.jpg" />
+    <Content Include="images\01-testimonial.jpg" />
+    <Content Include="images\02-car-listing.jpg" />
+    <Content Include="images\02-recent-thumb.jpg" />
+    <Content Include="images\02-service-image.jpg" />
+    <Content Include="images\02-slide.jpg" />
+    <Content Include="images\02-testimonial.jpg" />
+    <Content Include="images\03-blog.jpg" />
+    <Content Include="images\03-car-listing.jpg" />
+    <Content Include="images\03-service-image.jpg" />
+    <Content Include="images\03-slide.jpg" />
+    <Content Include="images\03-testimonial.jpg" />
+    <Content Include="images\04-car-listing.jpg" />
+    <Content Include="images\04-testimonial.jpg" />
+    <Content Include="images\05-blog.jpg" />
+    <Content Include="images\05-car-listing.jpg" />
+    <Content Include="images\06-blog.jpg" />
+    <Content Include="images\06-car-listing.jpg" />
+    <Content Include="images\08-blog.jpg" />
+    <Content Include="images\1By0Ocp.png" />
+    <Content Include="images\about-image.jpg" />
+    <Content Include="images\blury-bg.jpg" />
+    <Content Include="images\Componants\1.png" />
+    <Content Include="images\Componants\contact.jpg" />
+    <Content Include="images\Componants\g1.jpg" />
+    <Content Include="images\Componants\g10.png" />
+    <Content Include="images\Componants\g4.jpg" />
+    <Content Include="images\Componants\g5.jpg" />
+    <Content Include="images\Componants\g8.png" />
+    <Content Include="images\Componants\g9.jpg" />
+    <Content Include="images\Componants\port-img17.jpg" />
+    <Content Include="images\Componants\test.jpg" />
+    <Content Include="images\contact.jpg" />
+    <Content Include="images\download.jpg" />
+    <Content Include="images\Footer\facebook.png" />
+    <Content Include="images\Footer\google-plus.png" />
+    <Content Include="images\Footer\instagram.png" />
+    <Content Include="images\Footer\pinterest.png" />
+    <Content Include="images\Footer\twitter.png" />
+    <Content Include="images\Footer\youtube.png" />
+    <Content Include="images\heading-bg.jpg" />
+    <Content Include="images\images %281%29.jpg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\large_left.png" />
+    <Content Include="images\large_right.png" />
+    <Content Include="images\LatestNews\01-blog.jpg" />
+    <Content Include="images\LatestNews\02-blog.jpg" />
+    <Content Include="images\LatestNews\03-blog.jpg" />
+    <Content Include="images\LatestNews\port-img11.jpg" />
+    <Content Include="images\LatestNews\port-img13.jpg" />
+    <Content Include="images\LatestNews\port-img9.jpg" />
+    <Content Include="images\LatestNews\z1.jpg" />
+    <Content Include="images\LatestNews\z2.jpg" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="index.js" />
+    <Content Include="Information%28Admin%29.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery.gmap3.min.js" />
+    <Content Include="js\jquery.themepunch.revolution.min.js" />
+    <Content Include="js\jquery.themepunch.tools.min.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="Lists%28GER%29.aspx" />
+    <Content Include="Lists%28JAP%29.aspx" />
+    <Content Include="Lists%28KOR%29.aspx" />
+    <Content Include="Lists%28USA%29.aspx" />
+    <Content Include="ListsGER%28Admin%29.aspx" />
+    <Content Include="ListsJAP%28Admin%29.aspx" />
+    <Content Include="ListsKOR%28Admin%29.aspx" />
+    <Content Include="ListsUSA%28Admin%29.aspx" />
+    <Content Include="LogIn.aspx" />
+    <Content Include="Requstes%28New%29Admin.aspx" />
+    <Content Include="Requstes%28Used%29.aspx" />
+    <Content Include="Requstes%28Used%29Admin.aspx" />
+    <Content Include="ResetPass.aspx" />
+    <Content Include="Rrequests%28New%29.aspx" />
+    <Content Include="Services.aspx" />
+    <Content Include="Subject%28comments%29.aspx" />
+    <Content Include="User%28Admin%29.aspx" />
+    <Content Include="UserParts.aspx" />
+    <Content Include="Vision.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WorkShop%28Admin%29.aspx" />
+    <Content Include="WorkShops%28User%29.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddServices.aspx.cs">
+      <DependentUpon>AddServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddServices.aspx.designer.cs">
+      <DependentUpon>AddServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Comments%28Admin%29.aspx.cs">
+      <DependentUpon>Comments%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comments%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Comments%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact US.aspx.cs">
+      <DependentUpon>Contact US.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact US.aspx.designer.cs">
+      <DependentUpon>Contact US.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contactus%28Admin%29.aspx.cs">
+      <DependentUpon>Contactus%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contactus%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Contactus%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer%28Admin%29.aspx.cs">
+      <DependentUpon>Customer%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Customer%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help%28Admin%29.aspx.cs">
+      <DependentUpon>Help%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Help%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home%28Admin%29.aspx.cs">
+      <DependentUpon>Home%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Home%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information%28Admin%29.aspx.cs">
+      <DependentUpon>Information%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information%28Admin%29.aspx.designer.cs">
+      <DependentUpon>Information%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lists%28GER%29.aspx.cs">
+      <DependentUpon>Lists%28GER%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lists%28GER%29.aspx.designer.cs">
+      <DependentUpon>Lists%28GER%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lists%28JAP%29.aspx.cs">
+      <DependentUpon>Lists%28JAP%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lists%28JAP%29.aspx.designer.cs">
+      <DependentUpon>Lists%28JAP%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lists%28KOR%29.aspx.cs">
+      <DependentUpon>Lists%28KOR%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lists%28KOR%29.aspx.designer.cs">
+      <DependentUpon>Lists%28KOR%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lists%28USA%29.aspx.cs">
+      <DependentUpon>Lists%28USA%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lists%28USA%29.aspx.designer.cs">
+      <DependentUpon>Lists%28USA%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListsGER%28Admin%29.aspx.cs">
+      <DependentUpon>ListsGER%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListsGER%28Admin%29.aspx.designer.cs">
+      <DependentUpon>ListsGER%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListsJAP%28Admin%29.aspx.cs">
+      <DependentUpon>ListsJAP%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListsJAP%28Admin%29.aspx.designer.cs">
+      <DependentUpon>ListsJAP%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListsKOR%28Admin%29.aspx.cs">
+      <DependentUpon>ListsKOR%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListsKOR%28Admin%29.aspx.designer.cs">
+      <DependentUpon>ListsKOR%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListsUSA%28Admin%29.aspx.cs">
+      <DependentUpon>ListsUSA%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListsUSA%28Admin%29.aspx.designer.cs">
+      <DependentUpon>ListsUSA%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requstes%28New%29Admin.aspx.cs">
+      <DependentUpon>Requstes%28New%29Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Requstes%28New%29Admin.aspx.designer.cs">
+      <DependentUpon>Requstes%28New%29Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requstes%28Used%29.aspx.cs">
+      <DependentUpon>Requstes%28Used%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Requstes%28Used%29.aspx.designer.cs">
+      <DependentUpon>Requstes%28Used%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requstes%28Used%29Admin.aspx.cs">
+      <DependentUpon>Requstes%28Used%29Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Requstes%28Used%29Admin.aspx.designer.cs">
+      <DependentUpon>Requstes%28Used%29Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPass.aspx.cs">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPass.aspx.designer.cs">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rrequests%28New%29.aspx.cs">
+      <DependentUpon>Rrequests%28New%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rrequests%28New%29.aspx.designer.cs">
+      <DependentUpon>Rrequests%28New%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Subject%28comments%29.aspx.cs">
+      <DependentUpon>Subject%28comments%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subject%28comments%29.aspx.designer.cs">
+      <DependentUpon>Subject%28comments%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User%28Admin%29.aspx.cs">
+      <DependentUpon>User%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User%28Admin%29.aspx.designer.cs">
+      <DependentUpon>User%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserParts.aspx.cs">
+      <DependentUpon>UserParts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserParts.aspx.designer.cs">
+      <DependentUpon>UserParts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vision.aspx.cs">
+      <DependentUpon>Vision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vision.aspx.designer.cs">
+      <DependentUpon>Vision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkShop%28Admin%29.aspx.cs">
+      <DependentUpon>WorkShop%28Admin%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkShop%28Admin%29.aspx.designer.cs">
+      <DependentUpon>WorkShop%28Admin%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkShops%28User%29.aspx.cs">
+      <DependentUpon>WorkShops%28User%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkShops%28User%29.aspx.designer.cs">
+      <DependentUpon>WorkShops%28User%29.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <None Include="fonts\flexslider-icon.eot" />
+    <None Include="fonts\flexslider-icon.svg" />
+    <None Include="fonts\flexslider-icon.ttf" />
+    <None Include="fonts\flexslider-icon.woff" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.svg" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <None Include="fonts\JF-Flat-light.ttf" />
+    <None Include="fonts\JF-Flat-medium.ttf" />
+    <None Include="fonts\JF-Flat-regular.eot" />
+    <None Include="fonts\JF-Flat-regular.ttf" />
+    <None Include="fonts\JFFlat-Regular.woff" />
+    <None Include="fonts\revicons.eot" />
+    <None Include="fonts\revicons.svg" />
+    <None Include="fonts\revicons.ttf" />
+    <None Include="fonts\revicons.woff" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Site1.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51336</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
